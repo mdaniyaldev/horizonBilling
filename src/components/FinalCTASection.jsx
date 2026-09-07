@@ -2,7 +2,7 @@ import { Phone, ArrowRight, ShieldCheck, Mail, Calendar, CheckCircle2 } from "lu
 
 export default function FinalCTASection() {
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-b from-brand-primary to-charcoal-deep text-neutral-white relative overflow-hidden">
+    <section className="py-16 md:py-24 bg-[#203858] text-neutral-white relative overflow-hidden border-t border-slate-800">
       {/* Background Graphic Accents */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-brand-light/10 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-brand-medium/20 rounded-full blur-3xl pointer-events-none" />

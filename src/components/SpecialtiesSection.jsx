@@ -73,12 +73,12 @@ export default function SpecialtiesSection() {
   const Icon = currentSpecialty.icon;
 
   return (
-    <section className="py-16 md:py-24 bg-neutral-white">
+    <section className="py-16 md:py-24 bg-[#F8FAFC] border-t border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="inline-block bg-slate-100 text-[#203858] text-xs font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-wider">
+          <span className="inline-block bg-slate-200 text-[#203858] text-xs font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-wider">
             TAILORED WORKFLOWS
           </span>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-brand-primary mt-1 mb-4">
@@ -96,8 +96,8 @@ export default function SpecialtiesSection() {
             onClick={() => setActiveTab("behavioral-health")}
             className={`min-h-[48px] px-6 py-3 rounded-xl font-bold text-sm transition-all flex items-center gap-2 ${
               activeTab === "behavioral-health"
-                ? "bg-brand-primary text-neutral-white shadow-lg"
-                : "bg-gray-100 text-charcoal-primary hover:bg-gray-200"
+                ? "bg-[#203858] text-neutral-white shadow-lg"
+                : "bg-white border border-[#D9D9D9] text-charcoal-primary hover:bg-slate-100"
             }`}
           >
             <HeartPulse className="w-4 h-4" />
@@ -109,8 +109,8 @@ export default function SpecialtiesSection() {
             onClick={() => setActiveTab("oncology")}
             className={`min-h-[48px] px-6 py-3 rounded-xl font-bold text-sm transition-all flex items-center gap-2 ${
               activeTab === "oncology"
-                ? "bg-brand-primary text-neutral-white shadow-lg"
-                : "bg-gray-100 text-charcoal-primary hover:bg-gray-200"
+                ? "bg-[#203858] text-neutral-white shadow-lg"
+                : "bg-white border border-[#D9D9D9] text-charcoal-primary hover:bg-slate-100"
             }`}
           >
             <Activity className="w-4 h-4" />
@@ -122,8 +122,8 @@ export default function SpecialtiesSection() {
             onClick={() => setActiveTab("urgent-care")}
             className={`min-h-[48px] px-6 py-3 rounded-xl font-bold text-sm transition-all flex items-center gap-2 ${
               activeTab === "urgent-care"
-                ? "bg-brand-primary text-neutral-white shadow-lg"
-                : "bg-gray-100 text-charcoal-primary hover:bg-gray-200"
+                ? "bg-[#203858] text-neutral-white shadow-lg"
+                : "bg-white border border-[#D9D9D9] text-charcoal-primary hover:bg-slate-100"
             }`}
           >
             <ShieldAlert className="w-4 h-4" />
@@ -132,7 +132,7 @@ export default function SpecialtiesSection() {
         </div>
 
         {/* Active Tab Showcase Box */}
-        <div className="bg-gray-50 border border-neutral-light rounded-3xl p-6 sm:p-10 mb-16 shadow-md">
+        <div className="bg-white border border-[#D9D9D9] rounded-3xl p-6 sm:p-10 mb-16 shadow-md">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             
             <div className="lg:col-span-8 space-y-4">

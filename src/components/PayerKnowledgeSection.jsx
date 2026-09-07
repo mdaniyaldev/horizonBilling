@@ -17,7 +17,7 @@ export default function PayerKnowledgeSection() {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-neutral-white overflow-hidden border-b border-neutral-light/60">
+    <section className="py-16 md:py-24 bg-[#FFFFFF] overflow-hidden border-t border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}

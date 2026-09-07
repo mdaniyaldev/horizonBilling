@@ -53,11 +53,11 @@ export default function ServicesScopeSection() {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-[#FFFFFF] border-t border-b border-neutral-light/50">
+    <section className="py-16 md:py-24 bg-[#F8FAFC] border-t border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <span className="inline-block bg-slate-100 text-[#203858] text-xs font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-wider">
+          <span className="inline-block bg-slate-200 text-[#203858] text-xs font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-wider">
             OUR SERVICES
           </span>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-brand-primary mt-1 mb-4">

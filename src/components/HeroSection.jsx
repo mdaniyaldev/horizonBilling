@@ -2,7 +2,7 @@ import { ShieldCheck, Phone, ArrowRight, CheckCircle2, TrendingUp, Sparkles } fr
 
 export default function HeroSection() {
   return (
-    <section className="relative bg-[#203858] text-neutral-white py-16 md:py-24 overflow-hidden border-b border-brand-medium/30">
+    <section className="relative bg-[#203858] text-neutral-white py-16 md:py-24 overflow-hidden border-b border-[#304F78]/50">
       {/* Background Graphic Accents */}
       <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#6B85A3_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none" />
       <div className="absolute top-1/4 -right-20 w-80 h-80 bg-brand-light/20 rounded-full blur-3xl pointer-events-none" />
@@ -15,10 +15,9 @@ export default function HeroSection() {
           <div className="lg:col-span-7 flex flex-col items-start space-y-6">
             
             {/* Top Badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-medium/40 border border-brand-light/40 text-xs font-semibold text-brand-light backdrop-blur-sm shadow-inner">
-              <Sparkles className="w-4 h-4 text-emerald-400" />
-              <span>Next-Gen Medical Billing Architecture</span>
-            </div>
+            <span className="inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-white/10 text-white border border-white/20">
+              NEXT-GEN RCM ARCHITECTURE
+            </span>
 
             {/* Main Headline */}
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-neutral-white leading-tight">

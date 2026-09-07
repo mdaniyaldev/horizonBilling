@@ -37,18 +37,18 @@ export default function SpecialtyContactFormSection() {
   };
 
   return (
-    <section className="py-16 md:py-24 bg-gray-50 border-t border-b border-neutral-light">
+    <section className="py-16 md:py-24 bg-[#202028] border-t border-b border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto bg-neutral-white border border-neutral-light rounded-3xl p-6 sm:p-10 shadow-xl">
+        <div className="max-w-4xl mx-auto bg-[#202028] border border-[#304F78] rounded-3xl p-6 sm:p-10 shadow-[0_0_30px_rgba(48,79,120,0.3)] text-neutral-white">
           
           <div className="text-center max-w-2xl mx-auto mb-8">
-            <span className="inline-block bg-slate-100 text-[#203858] text-xs font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-wider">
+            <span className="inline-block bg-[#304F78]/40 text-blue-200 text-xs font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-wider border border-[#304F78]">
               SPECIALTY CONSULTATION
             </span>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-brand-primary mt-1 mb-3">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-neutral-white mt-1 mb-3">
               Discuss Your Specialty Requirements
             </h2>
-            <p className="text-sm text-charcoal-primary">
+            <p className="text-sm text-neutral-light/90">
               Connect directly with a revenue manager who understands your exact clinical coding, modifier rules, and payer fee schedules.
             </p>
           </div>

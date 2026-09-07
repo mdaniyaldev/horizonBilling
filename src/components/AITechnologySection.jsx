@@ -2,7 +2,7 @@ import { Bot, UserCheck, ShieldCheck, Zap, Layers, CheckCircle2 } from "lucide-r
 
 export default function AITechnologySection() {
   return (
-    <section className="py-16 md:py-24 bg-[#202028] text-neutral-white relative overflow-hidden">
+    <section className="py-16 md:py-24 bg-[#202028] text-neutral-white relative overflow-hidden border-t border-b border-slate-800">
       {/* Dynamic Background Effects */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#304F78]/20 via-[#202028] to-[#141419] opacity-90" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#304F78]/20 rounded-full blur-3xl pointer-events-none" />

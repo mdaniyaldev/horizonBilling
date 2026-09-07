@@ -29,7 +29,7 @@ export default function BuiltAroundRCMSection() {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-[#FFFFFF]">
+    <section className="py-16 md:py-24 bg-[#FFFFFF] border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}

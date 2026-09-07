@@ -29,7 +29,7 @@ export default function NumbersStatsSection() {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-[#304F78] text-neutral-white relative">
+    <section className="py-16 md:py-24 bg-[#304F78] text-neutral-white relative border-t border-b border-blue-900/40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center max-w-3xl mx-auto mb-14">

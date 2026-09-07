@@ -41,18 +41,18 @@ export default function RCMVisibilityGridSection() {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-neutral-white">
+    <section className="py-16 md:py-24 bg-[#203858] text-neutral-white border-t border-b border-[#304F78]/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="inline-block bg-slate-100 text-[#203858] text-xs font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-wider">
+          <span className="inline-block bg-white/10 text-white text-xs font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-wider border border-white/20">
             REVENUE VISIBILITY
           </span>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-brand-primary mt-1 mb-4">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-neutral-white mt-1 mb-4">
             Complete Revenue Cycle Visibility
           </h2>
-          <p className="text-base text-charcoal-primary">
+          <p className="text-base text-neutral-light/90">
             No black boxes or hidden operational metrics. Practice leaders gain real-time visibility into every single claim state across 4 core operational pillars.
           </p>
         </div>
@@ -64,32 +64,32 @@ export default function RCMVisibilityGridSection() {
             return (
               <div
                 key={idx}
-                className={`bg-gray-50 border-t-4 ${card.color} border-x border-b border-neutral-light rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group`}
+                className={`bg-[#203858] border-t-4 ${card.color} border-x border-b border-[#304F78] rounded-2xl p-6 sm:p-8 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between group`}
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <div className="w-12 h-12 rounded-xl bg-brand-primary text-neutral-white flex items-center justify-center shadow-md">
+                    <div className="w-12 h-12 rounded-xl bg-white/10 text-white flex items-center justify-center shadow-md">
                       <Icon className="w-6 h-6" />
                     </div>
-                    <span className="text-xs font-bold text-brand-primary bg-neutral-white border border-neutral-light px-3 py-1 rounded-full shadow-sm">
+                    <span className="text-xs font-bold text-white bg-white/10 border border-white/20 px-3 py-1 rounded-full shadow-sm">
                       {card.metric}
                     </span>
                   </div>
 
-                  <h3 className="text-xl font-bold text-brand-primary mb-1">
+                  <h3 className="text-xl font-bold text-neutral-white mb-1">
                     {card.title}
                   </h3>
-                  <span className="block text-xs font-semibold text-brand-medium mb-3">
+                  <span className="block text-xs font-semibold text-brand-light mb-3">
                     {card.subtitle}
                   </span>
 
-                  <p className="text-sm text-charcoal-primary leading-relaxed">
+                  <p className="text-sm text-neutral-light/90 leading-relaxed">
                     {card.description}
                   </p>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-neutral-light/60 flex items-center text-xs font-semibold text-brand-secondary group-hover:text-brand-primary">
-                  <CheckCircle2 className="w-4 h-4 mr-1.5 text-emerald-600" />
+                <div className="mt-6 pt-4 border-t border-[#304F78] flex items-center text-xs font-semibold text-emerald-400">
+                  <CheckCircle2 className="w-4 h-4 mr-1.5 text-emerald-400" />
                   <span>Integrated Real-Time Reporting Module</span>
                 </div>
               </div>

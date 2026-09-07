@@ -23,9 +23,9 @@ export default function TechInPracticeFormSection() {
   };
 
   return (
-    <section className="py-16 md:py-24 bg-neutral-white">
+    <section className="py-16 md:py-24 bg-[#203858] border-t border-b border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-gradient-to-br from-brand-primary via-brand-secondary to-brand-primary rounded-3xl p-6 sm:p-10 lg:p-12 shadow-2xl text-neutral-white relative overflow-hidden border border-brand-light/20">
+        <div className="bg-[#203858] border border-[#304F78] rounded-3xl p-6 sm:p-10 lg:p-12 shadow-2xl text-neutral-white relative overflow-hidden">
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             
