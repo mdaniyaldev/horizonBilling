@@ -1,5 +1,8 @@
 import { ShieldCheck, ArrowRight, Phone, CheckCircle2, Lock } from "lucide-react";
 
+import Image from "next/image";
+import logo from "@/app/logo.webp";
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -33,18 +36,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Brand Info */}
           <div className="lg:col-span-2 space-y-4">
-            <a href="https://www.billinghorizon.com/" className="inline-flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-medium to-brand-light flex items-center justify-center text-white shadow-lg">
-                <ShieldCheck className="w-6 h-6" />
-              </div>
-              <div className="flex flex-col">
-                <span className="text-xl font-bold tracking-tight text-neutral-white">
-                  Billing Horizon
-                </span>
-                <span className="text-[10px] text-brand-light uppercase tracking-widest font-semibold">
-                  Medical Billing & RCM
-                </span>
-              </div>
+            <a href="https://www.billinghorizon.com/" className="inline-flex items-center">
+              <Image
+                src={logo}
+                alt="Billing Horizon - Revenue Cycle Solutions"
+                width={220}
+                height={60}
+                className="h-10 sm:h-12 w-auto object-contain"
+              />
             </a>
             <p className="text-base text-neutral-light/80 max-w-sm">
               AI-enabled medical billing operations designed to optimize revenue cycle management, improve clean claim rates, and accelerate cash flow for healthcare practices nationwide.

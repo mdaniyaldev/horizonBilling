@@ -5,6 +5,11 @@ import Footer from "@/components/Footer";
 export const metadata = {
   title: "Billing Horizon | AI Enabled Medical Billing Operations",
   description: "AI Enabled Medical Billing Operations — The Revenue Cycle, Managed From the Inside Out.",
+  icons: {
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
+  },
 };
 
 export default function RootLayout({ children }) {

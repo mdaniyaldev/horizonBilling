@@ -3,6 +3,9 @@
 import { useState } from "react";
 import { Menu, X, Phone, ArrowRight, ShieldCheck } from "lucide-react";
 
+import Image from "next/image";
+import logo from "@/app/logo.webp";
+
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -20,18 +23,15 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="https://www.billinghorizon.com/" className="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-brand-light rounded-lg p-1">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-medium to-brand-light flex items-center justify-center text-neutral-white shadow-lg group-hover:scale-105 transition-transform">
-              <ShieldCheck className="w-6 h-6 text-white" />
-            </div>
-            <div className="flex flex-col">
-              <span className="text-xl font-bold tracking-tight text-neutral-white group-hover:text-brand-light transition-colors">
-                Billing Horizon
-              </span>
-              <span className="text-[10px] text-brand-light uppercase tracking-widest font-semibold">
-                Medical Billing & RCM
-              </span>
-            </div>
+          <a href="https://www.billinghorizon.com/" className="flex items-center group focus:outline-none focus:ring-2 focus:ring-brand-light rounded-lg p-1">
+            <Image
+              src={logo}
+              alt="Billing Horizon - Revenue Cycle Solutions"
+              width={220}
+              height={60}
+              className="h-10 sm:h-12 w-auto object-contain transition-transform group-hover:scale-105"
+              priority
+            />
           </a>
 
           {/* Desktop Navigation */}
