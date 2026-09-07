@@ -2,18 +2,18 @@ import { Bot, UserCheck, ShieldCheck, Zap, Layers, CheckCircle2 } from "lucide-r
 
 export default function AITechnologySection() {
   return (
-    <section className="py-16 md:py-24 bg-brand-primary text-neutral-white relative overflow-hidden">
+    <section className="py-16 md:py-24 bg-[#202028] text-neutral-white relative overflow-hidden">
       {/* Dynamic Background Effects */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-brand-secondary via-brand-primary to-charcoal-deep opacity-90" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-light/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#304F78]/20 via-[#202028] to-[#141419] opacity-90" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#304F78]/20 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <div className="max-w-3xl mx-auto text-center mb-12">
-          <span className="text-xs font-bold uppercase tracking-wider text-brand-light bg-brand-medium/40 px-3.5 py-1.5 rounded-full border border-brand-light/40">
-            Automated Intelligence + Human Judgment
+          <span className="inline-block bg-[#304F78]/40 text-blue-200 text-xs font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-wider border border-[#304F78]">
+            AI & AUTOMATION
           </span>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-neutral-white mt-4 mb-4">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-neutral-white mt-1 mb-4">
             AI Technology Inside Revenue Cycle
           </h2>
           <p className="text-base text-neutral-light/90">
@@ -22,7 +22,7 @@ export default function AITechnologySection() {
         </div>
 
         {/* Featured Core Philosophy Card */}
-        <div className="bg-gradient-to-r from-brand-secondary/90 to-brand-medium/90 border border-brand-light/40 rounded-3xl p-8 sm:p-10 shadow-2xl backdrop-blur-xl mb-12 text-center relative overflow-hidden">
+        <div className="bg-[#202028] border border-[#304F78] rounded-3xl p-8 sm:p-10 shadow-[0_0_30px_rgba(48,79,120,0.4)] backdrop-blur-xl mb-12 text-center relative overflow-hidden">
           <div className="absolute top-0 right-0 p-8 opacity-10">
             <Zap className="w-48 h-48 text-white" />
           </div>
@@ -41,7 +41,7 @@ export default function AITechnologySection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           
           {/* AI Column */}
-          <div className="bg-brand-secondary/40 border border-brand-light/30 rounded-2xl p-6 sm:p-8 space-y-4">
+          <div className="bg-[#202028] border border-[#304F78]/60 shadow-[0_0_20px_rgba(48,79,120,0.25)] rounded-2xl p-6 sm:p-8 space-y-4">
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 rounded-xl bg-emerald-500/20 border border-emerald-400/30 flex items-center justify-center text-emerald-400">
                 <Bot className="w-6 h-6" />
@@ -73,7 +73,7 @@ export default function AITechnologySection() {
           </div>
 
           {/* Billing Specialists Column */}
-          <div className="bg-brand-secondary/40 border border-brand-light/30 rounded-2xl p-6 sm:p-8 space-y-4">
+          <div className="bg-[#202028] border border-[#304F78]/60 shadow-[0_0_20px_rgba(48,79,120,0.25)] rounded-2xl p-6 sm:p-8 space-y-4">
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 rounded-xl bg-blue-500/20 border border-blue-400/30 flex items-center justify-center text-blue-300">
                 <UserCheck className="w-6 h-6" />

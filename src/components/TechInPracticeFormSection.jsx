@@ -31,8 +31,8 @@ export default function TechInPracticeFormSection() {
             
             {/* Left Content */}
             <div className="lg:col-span-6 space-y-6">
-              <span className="text-xs font-bold uppercase tracking-wider text-brand-light bg-brand-medium/50 px-3.5 py-1.5 rounded-full border border-brand-light/30">
-                Interactive Demonstration
+              <span className="inline-block bg-white/10 text-white text-xs font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-wider border border-white/20">
+                INTERACTIVE DEMO
               </span>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-neutral-white leading-tight">
                 See Technology in Practice

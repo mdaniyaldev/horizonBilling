@@ -29,15 +29,15 @@ export default function BuiltAroundRCMSection() {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-neutral-white">
+    <section className="py-16 md:py-24 bg-[#FFFFFF]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="text-xs font-bold uppercase tracking-wider text-brand-secondary bg-brand-light/15 px-3 py-1 rounded-full border border-brand-light/30">
-            Core Foundations
+          <span className="inline-block bg-slate-100 text-[#203858] text-xs font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-wider">
+            CORE FOUNDATIONS
           </span>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-brand-primary mt-3 mb-4">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-brand-primary mt-1 mb-4">
             Built Around Your Revenue Cycle
           </h2>
           <p className="text-base text-charcoal-primary">
@@ -52,7 +52,7 @@ export default function BuiltAroundRCMSection() {
             return (
               <div
                 key={idx}
-                className="bg-neutral-white border border-neutral-light hover:border-brand-medium rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
+                className="bg-[#FFFFFF] border border-[#D9D9D9] hover:border-[#203858] rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
               >
                 <div>
                   <div className="w-12 h-12 rounded-xl bg-brand-primary/10 group-hover:bg-brand-primary text-brand-primary group-hover:text-neutral-white flex items-center justify-center mb-5 transition-colors">

@@ -53,14 +53,14 @@ export default function ServicesScopeSection() {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-b from-neutral-white to-gray-50 border-t border-b border-neutral-light/50">
+    <section className="py-16 md:py-24 bg-[#FFFFFF] border-t border-b border-neutral-light/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <span className="text-xs font-bold uppercase tracking-wider text-brand-secondary bg-brand-light/20 px-3 py-1 rounded-full border border-brand-light/30">
-            End-to-End Solutions
+          <span className="inline-block bg-slate-100 text-[#203858] text-xs font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-wider">
+            OUR SERVICES
           </span>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-brand-primary mt-3 mb-4">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-brand-primary mt-1 mb-4">
             Full Scope Revenue Cycle Services
           </h2>
           <p className="text-base text-charcoal-primary">
@@ -74,7 +74,7 @@ export default function ServicesScopeSection() {
             return (
               <div
                 key={idx}
-                className="bg-neutral-white border border-neutral-light rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
+                className="bg-[#FFFFFF] border border-[#D9D9D9] hover:border-[#203858] rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
               >
                 <div className="absolute top-0 right-0 w-32 h-32 bg-brand-light/10 rounded-bl-full pointer-events-none group-hover:scale-110 transition-transform" />
                 

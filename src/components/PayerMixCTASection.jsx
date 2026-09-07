@@ -9,10 +9,9 @@ export default function PayerMixCTASection() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             
             <div className="lg:col-span-8 space-y-4">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-medium/50 text-xs font-semibold text-brand-light border border-brand-light/30">
-                <PieChart className="w-4 h-4 text-emerald-400" />
-                <span>Custom Payer Contract Optimization</span>
-              </div>
+              <span className="inline-block bg-white/10 text-white text-xs font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-wider border border-white/20">
+                PAYER CONTRACT OPTIMIZATION
+              </span>
               
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-neutral-white leading-tight">
                 Your Payer Mix Matters — Stop Allowing Underpayments to Slip Through

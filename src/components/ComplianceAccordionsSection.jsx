@@ -34,15 +34,15 @@ export default function ComplianceAccordionsSection() {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-gray-50 border-b border-neutral-light">
+    <section className="py-16 md:py-24 bg-[#F8FAFC] border-b border-neutral-light">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="text-xs font-bold uppercase tracking-wider text-brand-secondary bg-brand-light/20 px-3 py-1 rounded-full border border-brand-light/30">
-            Uncompromising Integrity
+          <span className="inline-block bg-slate-200 text-[#203858] text-xs font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-wider">
+            INTEGRITY & COMPLIANCE
           </span>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-brand-primary mt-3 mb-4">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-brand-primary mt-1 mb-4">
             Regulatory & Compliance Standards
           </h2>
           <p className="text-base text-charcoal-primary">

@@ -2,7 +2,7 @@ import { ShieldCheck, Phone, ArrowRight, CheckCircle2, TrendingUp, Sparkles } fr
 
 export default function HeroSection() {
   return (
-    <section className="relative bg-gradient-to-b from-brand-primary via-brand-primary to-brand-secondary text-neutral-white py-16 md:py-24 overflow-hidden border-b border-brand-medium/30">
+    <section className="relative bg-[#203858] text-neutral-white py-16 md:py-24 overflow-hidden border-b border-brand-medium/30">
       {/* Background Graphic Accents */}
       <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#6B85A3_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none" />
       <div className="absolute top-1/4 -right-20 w-80 h-80 bg-brand-light/20 rounded-full blur-3xl pointer-events-none" />

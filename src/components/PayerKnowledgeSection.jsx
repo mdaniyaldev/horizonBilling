@@ -22,10 +22,10 @@ export default function PayerKnowledgeSection() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="text-xs font-bold uppercase tracking-wider text-brand-secondary bg-brand-light/20 px-3 py-1 rounded-full border border-brand-light/30">
-            Deep Payer Expertise
+          <span className="inline-block bg-slate-100 text-[#203858] text-xs font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-wider">
+            PAYER EXPERTISE
           </span>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-brand-primary mt-3 mb-4">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-brand-primary mt-1 mb-4">
             Mastering Payer Rules & Reimbursement Dynamics
           </h2>
           <p className="text-base text-charcoal-primary">

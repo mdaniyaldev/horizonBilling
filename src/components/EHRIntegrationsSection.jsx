@@ -42,14 +42,14 @@ export default function EHRIntegrationsSection() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="text-xs font-bold uppercase tracking-wider text-brand-secondary bg-brand-light/20 px-3 py-1 rounded-full border border-brand-light/30">
-            Zero-Disruption Integration
+          <span className="inline-block bg-slate-100 text-[#203858] text-xs font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-wider">
+            SYSTEM INTEGRATIONS
           </span>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-brand-primary mt-3 mb-4">
-            EHR & EMR Platform Integrations
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-brand-primary mt-1 mb-4">
+            EHR & EMR Software Compatibility
           </h2>
           <p className="text-base text-charcoal-primary">
-            No need to change your existing Electronic Health Record system. Billing Horizon plugs directly into your software API or remote desktop portal with zero workflow downtime.
+            No need to switch software. Billing Horizon connects directly into your existing EHR platform via secure APIs, HL7 feeds, or cloud clearinghouse bridges.
           </p>
         </div>
 

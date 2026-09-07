@@ -29,14 +29,14 @@ export default function NumbersStatsSection() {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-brand-primary text-neutral-white relative">
+    <section className="py-16 md:py-24 bg-[#304F78] text-neutral-white relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <span className="text-xs font-bold uppercase tracking-wider text-brand-light bg-brand-medium/50 px-3.5 py-1.5 rounded-full border border-brand-light/30">
-            Measurable Performance
+          <span className="inline-block bg-white/10 text-white text-xs font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-wider border border-white/20">
+            MEASURABLE PERFORMANCE
           </span>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-neutral-white mt-3 mb-4">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-neutral-white mt-1 mb-4">
             Billing Horizon by the Numbers
           </h2>
           <p className="text-base text-neutral-light/90">
