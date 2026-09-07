@@ -1,4 +1,4 @@
-import { Star, Quote, Building, UserCheck } from "lucide-react";
+import { Star } from "lucide-react";
 
 export default function TestimonialsSection() {
   const testimonials = [
@@ -53,51 +53,52 @@ export default function TestimonialsSection() {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-[#FFFFFF] border-t border-b border-gray-200">
+    <section className="py-16 md:py-24 bg-[#FFFFFF] border-t border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="inline-block bg-slate-100 text-[#203858] text-xs font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-wider">
+          <span className="bg-[#00A896]/10 text-[#00A896] text-xs font-extrabold px-3 py-1 rounded-full border border-[#00A896]/20 uppercase tracking-wide inline-block mb-3">
             CLIENT REVIEWS
           </span>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-brand-primary mt-1 mb-4">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0A192F] mt-1 mb-4">
             Trusted by Practice Leaders Nationwide
           </h2>
-          <p className="text-base text-charcoal-primary">
+          <p className="text-base text-slate-600">
             Read how healthcare administrators and physician leaders transformed their revenue cycle performance with Billing Horizon.
           </p>
         </div>
 
-        {/* 6 Testimonial Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Horizontal snap-scroll on mobile, grid on desktop */}
+        <div className="flex overflow-x-auto snap-x snap-mandatory gap-5 pb-4 md:grid md:grid-cols-2 md:overflow-x-visible md:snap-none lg:grid-cols-3 scrollbar-hide">
           {testimonials.map((t, idx) => (
             <div
               key={idx}
-              className="bg-neutral-white border border-neutral-light rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between"
+              className="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between snap-start shrink-0 w-[85vw] sm:w-[70vw] md:w-auto"
             >
               <div>
-                {/* Rating Stars */}
-                <div className="flex items-center gap-1 mb-4 text-amber-400">
+                {/* Warm Amber Star Ratings */}
+                <div className="flex items-center gap-1 mb-4">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-amber-400" />
+                    <Star key={i} className="w-4 h-4 text-[#FFB703] fill-[#FFB703]" />
                   ))}
                 </div>
 
                 {/* Quote Text */}
-                <p className="text-sm text-charcoal-primary leading-relaxed mb-6 italic">
+                <p className="text-sm text-slate-600 leading-relaxed mb-6 italic">
                   "{t.quote}"
                 </p>
               </div>
 
-              <div className="pt-4 border-t border-neutral-light/60 flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-brand-primary text-neutral-white flex items-center justify-center font-bold text-sm shrink-0">
+              <div className="pt-4 border-t border-slate-100 flex items-center gap-3">
+                {/* Teal avatar */}
+                <div className="w-10 h-10 rounded-full bg-[#00A896] text-white flex items-center justify-center font-bold text-sm shrink-0">
                   {t.author.charAt(0)}
                 </div>
                 <div>
-                  <h3 className="text-sm font-bold text-brand-primary">{t.author}</h3>
-                  <p className="text-xs text-brand-secondary font-medium">{t.role} — {t.practice}</p>
-                  <span className="text-[11px] text-neutral-medium">{t.specialty}</span>
+                  <h3 className="text-sm font-bold text-[#0A192F]">{t.author}</h3>
+                  <p className="text-xs text-[#00A896] font-medium">{t.role} — {t.practice}</p>
+                  <span className="text-[11px] text-slate-400">{t.specialty}</span>
                 </div>
               </div>
             </div>

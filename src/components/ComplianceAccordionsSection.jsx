@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ShieldCheck, ChevronDown, Lock, FileText, CheckCircle2, AlertTriangle } from "lucide-react";
+import { ShieldCheck, Lock, CheckCircle2, Plus, Minus } from "lucide-react";
 
 export default function ComplianceAccordionsSection() {
   const [openIndex, setOpenIndex] = useState(0);
@@ -34,60 +34,61 @@ export default function ComplianceAccordionsSection() {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-[#F8FAFC] border-t border-b border-gray-200">
+    <section className="py-16 md:py-24 bg-[#F0F8FF] border-t border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="inline-block bg-slate-200 text-[#203858] text-xs font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-wider">
+          <span className="bg-[#00A896]/10 text-[#00A896] text-xs font-extrabold px-3 py-1 rounded-full border border-[#00A896]/20 uppercase tracking-wide inline-block mb-3">
             INTEGRITY & COMPLIANCE
           </span>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-brand-primary mt-1 mb-4">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0A192F] mt-1 mb-4">
             Regulatory & Compliance Standards
           </h2>
-          <p className="text-base text-charcoal-primary">
+          <p className="text-base text-slate-600">
             Healthcare compliance is not an afterthought. We embed rigid security frameworks and federal regulatory checks directly into our daily claim execution workflow.
           </p>
         </div>
 
         {/* Accordion Container */}
-        <div className="max-w-4xl mx-auto space-y-4">
+        <div className="max-w-4xl mx-auto space-y-3">
           {items.map((item, idx) => {
             const isOpen = openIndex === idx;
             return (
               <div
                 key={idx}
-                className="bg-neutral-white border border-neutral-light rounded-2xl overflow-hidden shadow-sm transition-all duration-200"
+                className={`bg-white border rounded-2xl overflow-hidden shadow-sm transition-all duration-200 ${isOpen ? "border-[#00A896]" : "border-slate-200"}`}
               >
                 <button
                   type="button"
                   onClick={() => setOpenIndex(isOpen ? null : idx)}
                   aria-expanded={isOpen}
-                  className="w-full min-h-[56px] px-6 py-4 flex items-center justify-between text-left focus:outline-none focus:bg-gray-50 hover:bg-gray-50 transition-colors"
+                  className="w-full min-h-[64px] px-6 py-4 flex items-center justify-between text-left focus:outline-none focus:bg-slate-50 hover:bg-slate-50 transition-colors"
                 >
                   <div className="flex items-center gap-3 pr-4">
-                    <div className="w-8 h-8 rounded-lg bg-brand-primary/10 text-brand-primary flex items-center justify-center shrink-0">
+                    <div className={`w-9 h-9 rounded-lg flex items-center justify-center shrink-0 transition-colors ${isOpen ? "bg-[#00A896] text-white" : "bg-[#00A896]/10 text-[#00A896]"}`}>
                       <ShieldCheck className="w-5 h-5" />
                     </div>
                     <div>
-                      <h3 className="text-base sm:text-lg font-bold text-brand-primary">
+                      <h3 className="text-base sm:text-lg font-bold text-[#0A192F]">
                         {item.title}
                       </h3>
-                      <span className="inline-block text-[11px] font-semibold text-brand-secondary">
+                      <span className={`inline-block text-[11px] font-semibold ${isOpen ? "text-[#00A896]" : "text-slate-400"}`}>
                         {item.badge}
                       </span>
                     </div>
                   </div>
-                  
-                  <div className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center shrink-0 text-brand-primary">
-                    <ChevronDown className={`w-5 h-5 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`} />
+
+                  {/* Plus/Minus icon */}
+                  <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-colors ${isOpen ? "bg-[#00A896] text-white" : "bg-slate-100 text-slate-500"}`}>
+                    {isOpen ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
                   </div>
                 </button>
 
                 {isOpen && (
-                  <div className="px-6 pb-6 pt-2 border-t border-neutral-light/50 text-sm text-charcoal-primary leading-relaxed bg-gray-50/50">
+                  <div className="px-6 pb-6 pt-2 border-t border-[#00A896]/20 text-sm text-slate-600 leading-relaxed bg-white">
                     <p className="mb-4">{item.content}</p>
-                    <div className="flex items-center gap-2 text-xs font-semibold text-emerald-600 bg-emerald-50 px-3 py-2 rounded-lg border border-emerald-200 w-fit">
+                    <div className="flex items-center gap-2 text-xs font-semibold text-[#00A896] bg-[#00A896]/10 px-3 py-2 rounded-lg border border-[#00A896]/20 w-fit">
                       <CheckCircle2 className="w-4 h-4" />
                       <span>Verified Active Protocol in Billing Horizon System</span>
                     </div>
@@ -102,7 +103,7 @@ export default function ComplianceAccordionsSection() {
         <div className="text-center mt-10">
           <a
             href="https://www.billinghorizon.com/compliance/"
-            className="text-xs font-bold text-brand-primary hover:text-brand-secondary underline inline-flex items-center gap-1"
+            className="text-xs font-bold text-[#00A896] hover:text-[#0A192F] underline inline-flex items-center gap-1"
           >
             <Lock className="w-3.5 h-3.5" />
             <span>Read Complete Compliance Architecture Documentation →</span>

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { CheckCircle2, ArrowRight, Shield, Clock, Send } from "lucide-react";
+import { CheckCircle2, Clock, Shield, Send } from "lucide-react";
 
 export default function TechInPracticeFormSection() {
   const [formData, setFormData] = useState({
@@ -15,7 +15,6 @@ export default function TechInPracticeFormSection() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate submission delay
     setTimeout(() => {
       setIsSubmitting(false);
       setSubmitted(true);
@@ -23,56 +22,52 @@ export default function TechInPracticeFormSection() {
   };
 
   return (
-    <section className="py-16 md:py-24 bg-[#203858] border-t border-b border-slate-800">
+    <section className="py-16 md:py-24 bg-[#00A896] border-t border-[#00A896]/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-[#203858] border border-[#304F78] rounded-3xl p-6 sm:p-10 lg:p-12 shadow-2xl text-neutral-white relative overflow-hidden">
-          
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-            
+        <div className="bg-[#0A192F] rounded-3xl p-6 sm:p-10 lg:p-12 shadow-2xl text-white relative overflow-hidden border border-[#00A896]/20">
+          {/* Glow blob */}
+          <div className="absolute top-0 right-0 w-80 h-80 bg-[#00A896]/10 rounded-full blur-3xl pointer-events-none" />
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10">
+
             {/* Left Content */}
             <div className="lg:col-span-6 space-y-6">
-              <span className="inline-block bg-white/10 text-white text-xs font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-wider border border-white/20">
+              <span className="bg-[#00A896]/10 text-[#00C49F] text-xs font-extrabold px-3 py-1 rounded-full border border-[#00A896]/30 uppercase tracking-wide inline-block">
                 INTERACTIVE DEMO
               </span>
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-neutral-white leading-tight">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white leading-tight">
                 See Technology in Practice
               </h2>
-              <p className="text-base text-neutral-light/90 leading-relaxed">
+              <p className="text-base text-slate-300 leading-relaxed">
                 Schedule a personalized 15-minute walkthrough of our medical billing platform. Discover how automated payer rule validation and intelligent claim tracking can transform your practice's monthly collections.
               </p>
 
               <div className="space-y-3 pt-2">
-                <div className="flex items-center gap-3 text-sm text-neutral-light">
-                  <div className="w-8 h-8 rounded-lg bg-emerald-500/20 flex items-center justify-center text-emerald-400 shrink-0">
-                    <CheckCircle2 className="w-5 h-5" />
+                {[
+                  { icon: CheckCircle2, text: "Real-time claim scrubbing demonstration tailored to your EHR" },
+                  { icon: Clock, text: "Quick 15-minute operational audit with zero obligation" },
+                  { icon: Shield, text: "100% HIPAA compliant data sharing protocols" },
+                ].map(({ icon: Icon, text }) => (
+                  <div key={text} className="flex items-center gap-3 text-sm text-slate-300">
+                    <div className="w-8 h-8 rounded-lg bg-[#00A896]/20 flex items-center justify-center text-[#00C49F] shrink-0">
+                      <Icon className="w-5 h-5" />
+                    </div>
+                    <span>{text}</span>
                   </div>
-                  <span>Real-time claim scrubbing demonstration tailored to your EHR</span>
-                </div>
-                <div className="flex items-center gap-3 text-sm text-neutral-light">
-                  <div className="w-8 h-8 rounded-lg bg-emerald-500/20 flex items-center justify-center text-emerald-400 shrink-0">
-                    <Clock className="w-5 h-5" />
-                  </div>
-                  <span>Quick 15-minute operational audit with zero obligation</span>
-                </div>
-                <div className="flex items-center gap-3 text-sm text-neutral-light">
-                  <div className="w-8 h-8 rounded-lg bg-emerald-500/20 flex items-center justify-center text-emerald-400 shrink-0">
-                    <Shield className="w-5 h-5" />
-                  </div>
-                  <span>100% HIPAA compliant data sharing protocols</span>
-                </div>
+                ))}
               </div>
             </div>
 
-            {/* Right Form Card */}
+            {/* Right Form Card — crisp white */}
             <div className="lg:col-span-6">
-              <div className="bg-neutral-white text-charcoal-primary rounded-2xl p-6 sm:p-8 shadow-xl border border-neutral-light">
+              <div className="bg-white text-slate-800 rounded-2xl p-6 sm:p-8 shadow-xl">
                 {submitted ? (
                   <div className="text-center py-8 space-y-4">
-                    <div className="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto">
+                    <div className="w-16 h-16 bg-[#00A896]/10 text-[#00A896] rounded-full flex items-center justify-center mx-auto">
                       <CheckCircle2 className="w-10 h-10" />
                     </div>
-                    <h3 className="text-2xl font-bold text-brand-primary">Demo Request Received!</h3>
-                    <p className="text-sm text-neutral-medium max-w-md mx-auto">
+                    <h3 className="text-2xl font-bold text-[#0A192F]">Demo Request Received!</h3>
+                    <p className="text-sm text-slate-500 max-w-md mx-auto">
                       Thank you, <strong>{formData.name}</strong>. A Billing Horizon revenue cycle specialist will contact you shortly at <strong>{formData.email}</strong> to coordinate your live session.
                     </p>
                     <button
@@ -80,19 +75,19 @@ export default function TechInPracticeFormSection() {
                         setSubmitted(false);
                         setFormData({ name: "", email: "", phone: "" });
                       }}
-                      className="mt-4 text-xs font-semibold text-brand-secondary underline hover:text-brand-primary"
+                      className="mt-4 text-xs font-semibold text-[#00A896] underline hover:text-[#0A192F]"
                     >
                       Submit another request
                     </button>
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-4">
-                    <h3 className="text-xl font-bold text-brand-primary mb-2">
+                    <h3 className="text-xl font-bold text-[#0A192F] mb-2">
                       Schedule Your Practice Review
                     </h3>
-                    
+
                     <div>
-                      <label htmlFor="full-name" className="block text-sm font-medium text-charcoal-primary mb-1">
+                      <label htmlFor="full-name" className="block text-sm font-medium text-slate-700 mb-1">
                         Full Name <span className="text-red-500">*</span>
                       </label>
                       <input
@@ -102,12 +97,12 @@ export default function TechInPracticeFormSection() {
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         placeholder="Dr. Sarah Jenkins"
-                        className="w-full min-h-[48px] px-4 rounded-xl border border-neutral-light bg-neutral-white text-base text-charcoal-primary focus:outline-none focus:ring-2 focus:ring-brand-secondary focus:border-transparent transition-all"
+                        className="w-full min-h-[48px] px-4 rounded-xl border border-slate-200 bg-slate-50 text-base text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#00A896] focus:border-transparent transition-all"
                       />
                     </div>
 
                     <div>
-                      <label htmlFor="work-email" className="block text-sm font-medium text-charcoal-primary mb-1">
+                      <label htmlFor="work-email" className="block text-sm font-medium text-slate-700 mb-1">
                         Work Email <span className="text-red-500">*</span>
                       </label>
                       <input
@@ -117,12 +112,12 @@ export default function TechInPracticeFormSection() {
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         placeholder="s.jenkins@medicalgroup.com"
-                        className="w-full min-h-[48px] px-4 rounded-xl border border-neutral-light bg-neutral-white text-base text-charcoal-primary focus:outline-none focus:ring-2 focus:ring-brand-secondary focus:border-transparent transition-all"
+                        className="w-full min-h-[48px] px-4 rounded-xl border border-slate-200 bg-slate-50 text-base text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#00A896] focus:border-transparent transition-all"
                       />
                     </div>
 
                     <div>
-                      <label htmlFor="phone-number" className="block text-sm font-medium text-charcoal-primary mb-1">
+                      <label htmlFor="phone-number" className="block text-sm font-medium text-slate-700 mb-1">
                         Phone Number <span className="text-red-500">*</span>
                       </label>
                       <input
@@ -132,14 +127,14 @@ export default function TechInPracticeFormSection() {
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         placeholder="(555) 000-0000"
-                        className="w-full min-h-[48px] px-4 rounded-xl border border-neutral-light bg-neutral-white text-base text-charcoal-primary focus:outline-none focus:ring-2 focus:ring-brand-secondary focus:border-transparent transition-all"
+                        className="w-full min-h-[48px] px-4 rounded-xl border border-slate-200 bg-slate-50 text-base text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#00A896] focus:border-transparent transition-all"
                       />
                     </div>
 
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full min-h-[48px] mt-2 px-6 py-3 rounded-xl text-base font-bold text-neutral-white bg-brand-primary hover:bg-brand-secondary transition-all flex items-center justify-center shadow-lg hover:shadow-xl disabled:opacity-75"
+                      className="w-full min-h-[48px] mt-2 px-6 py-3 rounded-xl text-base font-bold text-[#0A192F] bg-[#FFB703] hover:bg-yellow-400 transition-all flex items-center justify-center shadow-lg hover:shadow-xl disabled:opacity-75"
                     >
                       {isSubmitting ? (
                         <span>Processing...</span>
@@ -151,7 +146,7 @@ export default function TechInPracticeFormSection() {
                       )}
                     </button>
 
-                    <p className="text-xs text-center text-neutral-medium pt-1">
+                    <p className="text-xs text-center text-slate-400 pt-1">
                       By clicking above, you agree to our confidential demo terms. No spam ever.
                     </p>
                   </form>
@@ -160,7 +155,6 @@ export default function TechInPracticeFormSection() {
             </div>
 
           </div>
-
         </div>
       </div>
     </section>

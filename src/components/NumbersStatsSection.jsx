@@ -29,46 +29,46 @@ export default function NumbersStatsSection() {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-[#304F78] text-neutral-white relative border-t border-b border-blue-900/40">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+    <section className="py-16 md:py-20 bg-gradient-to-r from-[#0A192F] to-[#00A896] relative overflow-hidden border-t border-[#00A896]/30">
+      {/* Subtle grid overlay */}
+      <div className="absolute inset-0 opacity-5 bg-[radial-gradient(#FFFFFF_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <span className="inline-block bg-white/10 text-white text-xs font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-wider border border-white/20">
+          <span className="bg-white/10 text-white text-xs font-extrabold px-3 py-1 rounded-full border border-white/20 uppercase tracking-wide inline-block mb-3">
             MEASURABLE PERFORMANCE
           </span>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-neutral-white mt-1 mb-4">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white mt-1 mb-4">
             Billing Horizon by the Numbers
           </h2>
-          <p className="text-base text-neutral-light/90">
+          <p className="text-base text-white/80">
             Our technology-driven revenue cycle framework delivers consistent, data-backed financial outcomes for medical groups across the United States.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Stats strip — massive numbers */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 lg:gap-0">
           {stats.map((item, idx) => {
             const Icon = item.icon;
             return (
               <div
                 key={idx}
-                className="bg-brand-secondary/60 border border-brand-light/30 rounded-2xl p-6 text-center hover:bg-brand-secondary/80 transition-all duration-300 shadow-xl flex flex-col items-center justify-between group"
+                className={`flex flex-col items-center text-center px-8 py-8 group ${idx < stats.length - 1 ? "lg:border-r border-white/20" : ""} ${idx < 2 ? "sm:border-b lg:border-b-0 border-white/20" : ""}`}
               >
-                <div className="w-12 h-12 rounded-xl bg-brand-light/20 text-brand-light group-hover:scale-110 group-hover:text-white transition-all flex items-center justify-center mb-4">
+                <div className="w-12 h-12 rounded-xl bg-white/10 text-white flex items-center justify-center mb-4 group-hover:scale-110 group-hover:bg-white/20 transition-all">
                   <Icon className="w-6 h-6" />
                 </div>
-
-                <div>
-                  <div className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-neutral-white mb-2 text-transparent bg-clip-text bg-gradient-to-b from-white to-brand-light">
-                    {item.stat}
-                  </div>
-                  <h3 className="text-base font-bold text-neutral-white mb-1">
-                    {item.label}
-                  </h3>
-                  <p className="text-xs text-neutral-light/80">
-                    {item.subtext}
-                  </p>
+                {/* Massive stat number */}
+                <div className="text-5xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white mb-2 leading-none">
+                  {item.stat}
                 </div>
-
-                <div className="w-12 h-1 bg-brand-light/40 rounded-full mt-6 group-hover:w-20 transition-all" />
+                <h3 className="text-base font-bold text-white mb-1">
+                  {item.label}
+                </h3>
+                <p className="text-sm text-white/70">
+                  {item.subtext}
+                </p>
               </div>
             );
           })}

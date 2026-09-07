@@ -8,14 +8,21 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        teal: "#00A896",
+        navy: "#0A192F",
+        cyan: "#00C49F",
+        ice: "#F0F8FF",
+        amber: "#FFB703",
+        "slate-dark": "#1E293B",
+        /* Legacy aliases */
         brand: {
-          primary: "#203858",
-          secondary: "#304F78",
-          medium: "#385880",
+          primary: "#0A192F",
+          secondary: "#00A896",
+          medium: "#00C49F",
           light: "#6B85A3",
         },
         charcoal: {
-          deep: "#202028",
+          deep: "#1E293B",
           primary: "#383838",
         },
         neutral: {
@@ -29,12 +36,13 @@ module.exports = {
       },
       keyframes: {
         marquee: {
-          '0%': { transform: 'translateX(0%)' },
-          '100%': { transform: 'translateX(-50%)' },
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-50%)" },
         },
       },
       animation: {
-        marquee: 'marquee 25s linear infinite',
+        marquee: "marquee 30s linear infinite",
+        "marquee-fast": "marquee 20s linear infinite",
       },
     },
   },

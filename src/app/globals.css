@@ -3,22 +3,29 @@
 @config "../../tailwind.config.js";
 
 @theme {
-  --color-brand-primary: #203858;
-  --color-brand-secondary: #304F78;
-  --color-brand-medium: #385880;
+  /* Vibrant Healthcare Palette */
+  --color-teal: #00A896;
+  --color-navy: #0A192F;
+  --color-cyan: #00C49F;
+  --color-ice: #F0F8FF;
+  --color-amber: #FFB703;
+  --color-slate-dark: #1E293B;
+  --color-neutral-white: #FFFFFF;
+
+  /* Legacy aliases (kept for any residual usage in Header/Footer) */
+  --color-brand-primary: #0A192F;
+  --color-brand-secondary: #00A896;
+  --color-brand-medium: #00C49F;
   --color-brand-light: #6B85A3;
-  
-  --color-charcoal-deep: #202028;
+  --color-charcoal-deep: #1E293B;
   --color-charcoal-primary: #383838;
-  
   --color-neutral-medium: #686868;
   --color-neutral-light: #D9D9D9;
-  --color-neutral-white: #FFFFFF;
 }
 
 :root {
   --background: #FFFFFF;
-  --foreground: #383838;
+  --foreground: #0A192F;
 }
 
 body {
@@ -43,6 +50,16 @@ body {
   animation-play-state: paused;
 }
 
+.animate-marquee-fast {
+  display: flex;
+  width: max-content;
+  animation: marquee 20s linear infinite;
+}
+
+.animate-marquee-fast:hover {
+  animation-play-state: paused;
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
@@ -51,9 +68,9 @@ body {
   background: #f1f1f1;
 }
 ::-webkit-scrollbar-thumb {
-  background: #6B85A3;
+  background: #00A896;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #385880;
+  background: #00C49F;
 }

@@ -49,110 +49,80 @@ export default function SpecialtiesSection() {
   };
 
   const otherSpecialties = [
-    "Cardiology",
-    "Orthopedics",
-    "Dermatology",
-    "Gastroenterology",
-    "Neurology",
-    "Pediatric Medicine",
-    "OB/GYN",
-    "Internal Medicine",
-    "Pulmonology",
-    "Urology",
-    "Ophthalmology",
-    "Pain Management",
-    "Physical Therapy",
-    "Podiatry",
-    "Radiology",
-    "Anesthesiology",
-    "General Surgery",
-    "Rheumatology",
+    "Cardiology", "Orthopedics", "Dermatology", "Gastroenterology",
+    "Neurology", "Pediatric Medicine", "OB/GYN", "Internal Medicine",
+    "Pulmonology", "Urology", "Ophthalmology", "Pain Management",
+    "Physical Therapy", "Podiatry", "Radiology", "Anesthesiology",
+    "General Surgery", "Rheumatology",
   ];
 
   const currentSpecialty = specialtiesData[activeTab];
   const Icon = currentSpecialty.icon;
 
+  const tabs = [
+    { key: "behavioral-health", label: "Behavioral Health", icon: HeartPulse },
+    { key: "oncology", label: "Oncology & Infusion", icon: Activity },
+    { key: "urgent-care", label: "Urgent Care", icon: ShieldAlert },
+  ];
+
   return (
-    <section className="py-16 md:py-24 bg-[#F8FAFC] border-t border-b border-gray-200">
+    <section className="py-16 md:py-24 bg-slate-50 border-t border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="inline-block bg-slate-200 text-[#203858] text-xs font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-wider">
+          <span className="bg-[#00A896]/10 text-[#00A896] text-xs font-extrabold px-3 py-1 rounded-full border border-[#00A896]/20 uppercase tracking-wide inline-block mb-3">
             TAILORED WORKFLOWS
           </span>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-brand-primary mt-1 mb-4">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0A192F] mt-1 mb-4">
             Specialized Medical Billing Workflows
           </h2>
-          <p className="text-base text-charcoal-primary">
+          <p className="text-base text-slate-600">
             Every medical specialty carries unique billing codes, payer nuances, and modifier rules. We build specialty-specific rules engine profiles for your exact practice.
           </p>
         </div>
 
-        {/* Interactive Tabs */}
-        <div className="flex flex-wrap justify-center gap-3 mb-8">
-          <button
-            type="button"
-            onClick={() => setActiveTab("behavioral-health")}
-            className={`min-h-[48px] px-6 py-3 rounded-xl font-bold text-sm transition-all flex items-center gap-2 ${
-              activeTab === "behavioral-health"
-                ? "bg-[#203858] text-neutral-white shadow-lg"
-                : "bg-white border border-[#D9D9D9] text-charcoal-primary hover:bg-slate-100"
-            }`}
-          >
-            <HeartPulse className="w-4 h-4" />
-            <span>Behavioral Health</span>
-          </button>
-
-          <button
-            type="button"
-            onClick={() => setActiveTab("oncology")}
-            className={`min-h-[48px] px-6 py-3 rounded-xl font-bold text-sm transition-all flex items-center gap-2 ${
-              activeTab === "oncology"
-                ? "bg-[#203858] text-neutral-white shadow-lg"
-                : "bg-white border border-[#D9D9D9] text-charcoal-primary hover:bg-slate-100"
-            }`}
-          >
-            <Activity className="w-4 h-4" />
-            <span>Oncology & Infusion</span>
-          </button>
-
-          <button
-            type="button"
-            onClick={() => setActiveTab("urgent-care")}
-            className={`min-h-[48px] px-6 py-3 rounded-xl font-bold text-sm transition-all flex items-center gap-2 ${
-              activeTab === "urgent-care"
-                ? "bg-[#203858] text-neutral-white shadow-lg"
-                : "bg-white border border-[#D9D9D9] text-charcoal-primary hover:bg-slate-100"
-            }`}
-          >
-            <ShieldAlert className="w-4 h-4" />
-            <span>Urgent Care</span>
-          </button>
+        {/* Interactive Horizontal Scroll Tabs */}
+        <div className="flex flex-nowrap overflow-x-auto sm:flex-wrap sm:overflow-x-visible justify-start sm:justify-center gap-3 mb-8 pb-2 sm:pb-0 scrollbar-hide">
+          {tabs.map(({ key, label, icon: TabIcon }) => (
+            <button
+              key={key}
+              type="button"
+              onClick={() => setActiveTab(key)}
+              className={`min-h-[48px] px-6 py-3 rounded-xl font-bold text-sm transition-all flex items-center gap-2 whitespace-nowrap shrink-0 ${
+                activeTab === key
+                  ? "bg-[#00A896] text-white shadow-lg shadow-[#00A896]/25"
+                  : "bg-white border border-slate-200 text-slate-600 hover:border-[#00A896] hover:text-[#00A896]"
+              }`}
+            >
+              <TabIcon className="w-4 h-4" />
+              <span>{label}</span>
+            </button>
+          ))}
         </div>
 
         {/* Active Tab Showcase Box */}
-        <div className="bg-white border border-[#D9D9D9] rounded-3xl p-6 sm:p-10 mb-16 shadow-md">
+        <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-10 mb-10 shadow-md hover:shadow-lg transition-shadow">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            
+
             <div className="lg:col-span-8 space-y-4">
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-2xl bg-brand-primary text-neutral-white flex items-center justify-center shadow-md">
+                <div className="w-12 h-12 rounded-2xl bg-[#00A896] text-white flex items-center justify-center shadow-md">
                   <Icon className="w-6 h-6" />
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-brand-primary">
+                <h3 className="text-xl sm:text-2xl font-bold text-[#0A192F]">
                   {currentSpecialty.title}
                 </h3>
               </div>
 
-              <p className="text-base text-charcoal-primary leading-relaxed">
+              <p className="text-base text-slate-600 leading-relaxed">
                 {currentSpecialty.description}
               </p>
 
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
                 {currentSpecialty.points.map((pt, pIdx) => (
-                  <li key={pIdx} className="flex items-start text-sm text-charcoal-primary">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600 mr-2 shrink-0 mt-0.5" />
+                  <li key={pIdx} className="flex items-start text-sm text-slate-600">
+                    <CheckCircle2 className="w-4 h-4 text-[#00A896] mr-2 shrink-0 mt-0.5" />
                     <span>{pt}</span>
                   </li>
                 ))}
@@ -162,7 +132,7 @@ export default function SpecialtiesSection() {
             <div className="lg:col-span-4 flex flex-col justify-center items-center lg:items-end">
               <a
                 href={currentSpecialty.link}
-                className="inline-flex items-center justify-center min-h-[48px] px-6 py-3.5 rounded-xl text-sm font-bold text-neutral-white bg-brand-primary hover:bg-brand-secondary transition-all shadow-md hover:shadow-lg w-full sm:w-auto text-center"
+                className="inline-flex items-center justify-center min-h-[48px] px-6 py-3.5 rounded-xl text-sm font-bold text-white bg-[#00A896] hover:bg-[#00C49F] transition-all shadow-md hover:shadow-lg w-full sm:w-auto text-center"
               >
                 <span>View {currentSpecialty.title} Details</span>
                 <ArrowRight className="w-4 h-4 ml-2" />
@@ -172,18 +142,18 @@ export default function SpecialtiesSection() {
           </div>
         </div>
 
-        {/* 60+ Specialties Grid Overview */}
-        <div className="bg-brand-primary/5 border border-brand-light/40 rounded-3xl p-6 sm:p-8">
+        {/* 60+ Specialties Grid */}
+        <div className="bg-[#0A192F]/5 border border-[#00A896]/20 rounded-3xl p-6 sm:p-8">
           <div className="flex items-center justify-between mb-6 flex-wrap gap-4">
             <div className="flex items-center gap-2">
-              <Stethoscope className="w-5 h-5 text-brand-primary" />
-              <h3 className="text-lg font-bold text-brand-primary">
+              <Stethoscope className="w-5 h-5 text-[#00A896]" />
+              <h3 className="text-lg font-bold text-[#0A192F]">
                 Supporting Over 60+ Medical Specialties Across the U.S.
               </h3>
             </div>
             <a
               href="https://www.billinghorizon.com/specialties/"
-              className="text-xs font-bold text-brand-secondary hover:text-brand-primary underline"
+              className="text-xs font-bold text-[#00A896] hover:text-[#0A192F] underline"
             >
               Browse All 60+ Specialty Guides →
             </a>
@@ -193,7 +163,7 @@ export default function SpecialtiesSection() {
             {otherSpecialties.map((spec, sIdx) => (
               <div
                 key={sIdx}
-                className="bg-neutral-white p-3 rounded-xl border border-neutral-light text-center text-xs font-semibold text-charcoal-primary hover:border-brand-medium hover:text-brand-primary transition-all shadow-sm"
+                className="bg-white p-3 rounded-xl border border-slate-200 text-center text-xs font-semibold text-slate-600 hover:border-[#00A896] hover:text-[#00A896] transition-all shadow-sm cursor-default"
               >
                 {spec}
               </div>
